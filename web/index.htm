@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="layout">
+        <header class="sidebar">
+            <div class="menu-column">
+                <div class="top">
+                    <h1>Hotel Reservas</h1>
+                </div>
+                <hr>
+                <div class="bottom">
+                    <p style="background: #2c3990"><i class="fa-regular fa-house"></i>Quartos</p>
+                    <p><i class="fa-regular fa-calendar-check"></i>Reservas</p>
+                    <p><i class="fa-solid fa-circle-exclamation"></i>Sobre</p>
+                </div>
+            </div>
+        </header>
+    
+        <main>
+            <div class="main-content">
+                <div class="head">
+                    <div class="left">
+                        <h2>Quartos cadastrados</h2>
+                        <p>Gerencie os quartos do hotel</p>
+                    </div>
+                    <div class="right">
+                        <button onclick="abrirModal()"><i class="fa-solid fa-plus"></i>Novo Quarto</button>
+                    </div>
+                </div>
+                <div class="table-quartos">
+                    <table>
+                        <!-----------HEAD------------->
+                        <thead>
+                            <tr>
+                                <th>N° Quarto</th>
+                                <th>Tipo</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <!-----------BODY------------->
+                        <tbody id="tbody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="modal-create">
+                <form action="" id="formQuarto">
+                    <div class="modal-head">
+                        <h2>Cadastro de Quartos</h2>
+                        <p>Coloque as informações abaixo</p>
+                    </div>
+                    
+                    <div class="form-inputs">
+                        <div class="numero inputs">
+                            <label for="numero">Número do Quarto</label>
+                            <input type="text" id="numero" placeholder="Ex.: 101" required>
+                        </div>
+                        <div class="tipo inputs">
+                            <label for="tipo">Tipo de Quarto</label>
+                            <select id="tipo" required>
+                                <option value="" disabled selected hidden>Selecione o tipo</option>
+                                <option value="STANDARD">Standart</option>
+                                <option value="SUITE">Suite</option>
+                                <option value="LUXO">Luxo</option>
+                            </select>
+                        </div>
+                        <div class="form-buttons">
+                            <button><i class="fa-regular fa-floppy-disk"></i>Cadastrar</button>
+                            <button type="button" onclick="fecharModalq()">Cancelar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="main-reservas">
+                <div class="head">
+                    <div class="left">
+                        <h2 id="h2">Reservas cadastrados</h2>
+                        <p id="desc"></p>
+                    </div>
+                    <div class="right">
+                        <button onclick="abrirModalReservas()"><i class="fa-solid fa-plus"></i>Nova Reserva</button>
+                    </div>
+                </div>
+                <div class="table-reservas">
+                    <table>
+                        <!-----------HEAD------------->
+                        <thead>
+                            <tr>
+                                <th>Nome do Hóspede</th>
+                                <th>Data de Entrada</th>
+                                <th>Data de Saída</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <!-----------BODY------------->
+                        <tbody id="tbodyr">
+                        </tbody>
+                    </table>
+                </div>
+                <button onclick="voltar()" class="voltar"><i class="fa-solid fa-arrow-left"></i>Voltar</button>
+            </div>
+
+            <div class="modal-reserva" id="formReserva">
+                <form action="">
+                    <div class="modal-head">
+                        <h2>Cadastro de Reserva</h2>
+                        <p>Coloque os detalhes abaixo</p>
+                    </div>
+                    <div class="form-inputs">
+                        <div class="nome inputs">
+                            <label for="hospede">Nome do Hóspede</label>
+                            <input type="text" id="hospede" placeholder="Ex.: Marília Ferreira Lopes" required>
+                        </div>
+                        <div class="Data-entrada inputs">
+                            <label for="data_entrada">Data de Entrada</label>
+                            <input type="datetime" id="data_entrada" placeholder="Ex.: 2026-06-12T12:00:00.000Z" required>
+                        </div>
+                        <div class="Data-saida inputs">
+                            <label for="data_saida">Data de Saída</label>
+                            <input type="datetime" id="data_saida" placeholder="Ex.: 2026-06-12T12:00:00.000Z" required>
+                        </div>
+                        <div class="form-buttons">
+                            <button><i class="fa-regular fa-floppy-disk"></i>Cadastrar Reserva</button>
+                            <button type="button" onclick="fecharModalReservas()">Cancelar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
