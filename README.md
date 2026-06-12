@@ -46,4 +46,5 @@ npm run dev
 | Home | Cadastro de quartos | Reservas | Cadastro de reservas |
 | -------- | -------- | -------- | -------- |
 | ![Exemplo](./wireframes/home.png)  | ![Exemplo](./wireframes/cadq.png)  | ![Exemplo](./wireframes/reservas.png)  | ![Exemplo](./wireframes/cadr.png)  |
+| -------- | -------- | -------- | -------- |
 
