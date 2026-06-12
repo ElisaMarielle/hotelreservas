@@ -40,7 +40,7 @@ npm run dev
 
 ## Prints
 - **Exemplo:**
-![Exemplo](./wireframes/image.png)
+| ![Exemplo](./wireframes/image.png) |
 
 - **Site:**
 | Home | Cadastro de quartos | Reservas | Cadastro de reservas |
